@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculadora IMC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" position="floating" placeholder="Quilos">Digite o seu peso: (kg) </ion-label>
+      <ion-input [(ngModel)]="peso"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" position="floating" placeholder="Metros">Digite a sua altura: (m) </ion-label>
+      <ion-input [(ngModel)]="altura"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="calcularIMC()">Calcular</ion-button>
+</ion-list>
+<ion-list>
+  <ion-item>
+    <ion-label>Classificação do IMC:</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label> Menor que 18,5 - Abaixo do peso</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Entre 18,5 e 24,9 - Peso normal</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Entre 25,0 e 29,9 - Excesso de Peso</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Entre 30,0 e 34,9 - Obesidade Leve (Grau I)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Entre 35,0 e 39,9 - Obesidade Severa (Grau II)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Igual ou maior que 40 - Obesidade Mórbida (Grau III)</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
